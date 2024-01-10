@@ -1,0 +1,15 @@
+<div *ngIf="book" class="list-item">
+<img *ngIf="book.thumbnailUrl" [src]="book.thumbnailUrl" alt="Cover">
+<h2>{{book.title}}</h2>
+<p role="doc-subtitle" *ngIf="book.subtitle">
+  {{book.subtitle}}
+</p>
+<ul class="comma-list">
+  <li *ngFor="let autor of book.authors">
+    {{autor}}
+  </li>
+</ul>
+
+<div>ISBN{{book.isbn}}</div>
+
+</div>
